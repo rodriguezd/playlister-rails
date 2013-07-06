@@ -1,11 +1,15 @@
 PlaylisterRails::Application.routes.draw do
-  resources :genres
+  resources :genres do
+    resources :songs
+  end
 
 
   resources :songs
 
 
-  resources :artists
+  resources :artists do
+    resources :songs
+  end
 
 
   # The priority is based upon order of creation:
