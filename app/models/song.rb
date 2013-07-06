@@ -10,9 +10,16 @@
 #  genre_id   :integer
 #
 
+require 'youtube_search'
+
 class Song < ActiveRecord::Base
-  attr_accessible :name, :artist, :genre
+  attr_accessible :name, :artist_id, :genre_id
 
   belongs_to :artist
   belongs_to :genre
+
+  def youtube
+    YoutubeSearch.search("#{self.artist.name} #{self.name}").first
+  end
+
 end

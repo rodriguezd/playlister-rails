@@ -25,6 +25,8 @@ class SongsController < ApplicationController
   # GET /songs/new.json
   def new
     @song = Song.new
+    @artists = Artist.all
+    @genres = Genre.all
 
     respond_to do |format|
       format.html # new.html.erb
