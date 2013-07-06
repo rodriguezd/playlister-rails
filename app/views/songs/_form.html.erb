@@ -15,7 +15,36 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
+  <div class="field">
+    <%= f.label :artist %><br />
+    <%= f.text_field :artist %>
+  </div>
+  <div class="field">
+    <%= f.label :genre %><br />
+    <%= f.text_field :genre %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+##########
+
+<h1>New Song</h1>
+
+<form action="/songs" method="POST">
+  <p>
+    <label>Song Name: </label> <input type="text" name="song_name" />
+  </p>
+
+  <p>
+    <label>Artist: </label> <input type="text" name="artist_name" />
+  </p>
+
+  <p>
+    <label>Genre: </label> <input type="text" name="genre_name" />
+  </p>
+
+
+  <input type="submit">
+</form>
