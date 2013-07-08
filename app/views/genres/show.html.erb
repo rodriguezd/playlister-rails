@@ -1,10 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
+<h1>
   <%= @genre.name %>
+</h1>
+<p>
+  <%= link_to 'Back to Genres', genres_path %>
 </p>
+<b> Songs: </b>
 
+<ul>
+  <% @genre.songs.each do |song| %>
+  <li><%= link_to song.name, song %></li>
+  <% end %>
+</ul>
 
-<%= link_to 'Edit', edit_genre_path(@genre) %> |
-<%= link_to 'Back', genres_path %>
+<p>
+  <%= link_to 'Back to Index', app_index_path %>
+</p>

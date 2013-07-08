@@ -1,17 +1,9 @@
 PlaylisterRails::Application.routes.draw do
   get "app/index"
 
-  resources :genres do
-    resources :songs
-  end
-
-
+  resources :genres
   resources :songs
-
-
-  resources :artists do
-    resources :songs
-  end
+  resources :artists
 
   root :to => 'app#index'
 

@@ -10,8 +10,6 @@
 #  genre_id   :integer
 #
 
-require 'youtube_search'
-
 class Song < ActiveRecord::Base
   attr_accessible :name, :artist_id, :genre_id
 
